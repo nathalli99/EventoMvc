@@ -1,0 +1,11 @@
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\EventoMvc.exe
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\appsettings.Development.json
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\appsettings.json
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\EventoMvc.dll
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\EventoMvc.deps.json
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\EventoMvc.runtimeconfig.json
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\EventoMvc.pdb
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\Microsoft.AspNetCore.JsonPatch.dll
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\Newtonsoft.Json.dll
+D:\2DS_Beatriz_Nathalli\EventoMvc\Publish\Newtonsoft.Json.Bson.dll
