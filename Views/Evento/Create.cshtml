@@ -1,0 +1,71 @@
+@model EventoMvc.Models.EventoViewModel
+@{
+    ViewBag.Title = "Novo Evento";
+}
+
+@if (@TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Mensagem"]</div>
+}
+<!--Configuração para exibir mensagem de erro -->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]</div>
+}
+
+<h2>Criar um Novo Evento</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+         <div class="form-group">
+            @Html.LabelFor(model => model.Classe, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                
+                @Html.DropDownListFor(model => model.Classe , Html.GetEnumSelectList(typeof(EventoMvc.Models.Enuns.EventoEnum)), 
+                    "---Selecione---", new { @class = "form-control" })
+            
+            </div>
+        </div>  
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Artista, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Artista, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Local, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Data, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Data, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <br/>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-6">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("Retornar", "Index")
+</div>

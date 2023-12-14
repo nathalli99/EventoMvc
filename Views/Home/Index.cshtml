@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (@TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Mensagem"]</div>
+}
+<!--Configuração para exibir mensagem de erro -->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]</div>
+}
+
+<div class="text-center">
+    <h2 class="display-4">Seja bem-vindo(a)</h2>
+    <p>Registre eventos na nossa plataforma.</p>
+</div>
+<div>
+    <img src="https://www.ubc.org.br/images/noticias/inside/showsdentro11.png" style="height: 700px;" margin="auto" justify-content="center" />
+</div>
+
